@@ -1,8 +1,6 @@
 import java.util.*;
 import java.lang.*;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.BufferedReader;
+import java.io.*;
 class palindrome
 {
 	public static void main(String[]args)throws IOException
