@@ -1,0 +1,46 @@
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+
+class binarysearch
+{
+	public static void main (String[] args) 
+	{
+		Scanner in=new Scanner(System.in);
+		int n=in.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=in.nextInt();
+		}
+		Arrays.sort(a);
+		int s=in.nextInt();
+		int l=0,r=n-1,m=(l+r)/2;
+		int flag=0;
+		while(l<r)
+		{
+			if(a[m]<s)
+			{
+				l=m+1;
+			}
+			else if(a[m]==s)
+			{
+				System.out.println(s+" The element is present");
+				flag=1;
+				break;
+			}
+			else
+			{
+				r=m-1;
+			}
+			m=(l+r)/2;
+		}
+		if(flag==0)
+		{
+			System.out.println(s+" The element is NOT FOUND");
+		}
+	}
+}
